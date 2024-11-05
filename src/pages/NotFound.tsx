@@ -1,8 +1,8 @@
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
+import { Heading } from "../components/Heading";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Void } from "../objects/Void";
 
@@ -15,7 +15,7 @@ export function NotFound() {
             <Void />
           </Box>
           <Box>
-            <PageHeading>****</PageHeading>
+            <Heading scale={2}>****</Heading>
           </Box>
         </PageBanner>
         <Box>

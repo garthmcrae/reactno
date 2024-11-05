@@ -4,7 +4,7 @@ const label: CSSProperties = {
   fontSize: 12,
   fontWeight: 700,
   lineHeight: 1,
-  marginBottom: 12,
+  marginBottom: 8,
   marginTop: 0,
 };
 

@@ -65,7 +65,7 @@ export function Modal({
   }, []);
   return (
     <>
-      <Button ref={ref} onClick={handleShowModal}>
+      <Button aria-label="show modal" ref={ref} onClick={handleShowModal}>
         {name}
       </Button>
       {showModal &&

@@ -8,16 +8,17 @@ import { Box } from "../components/Box";
 import { Button } from "../components/Button";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
+import { Expander } from "../components/Expander";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Modal } from "../components/Modal";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Image } from "../components/Image";
 import { Void } from "../objects/Void";
 
+import ControlRaw from "../components/Control.tsx?raw";
 import focusTrapRaw from "../components/FocusTrap.tsx?raw";
 import modalRaw from "../components/Modal.tsx?raw";
 import imageRaw from "../components/Image.tsx?raw";
@@ -32,7 +33,7 @@ export function Components() {
             <Void />
           </Box>
           <Box>
-            <PageHeading>COMPONENTS</PageHeading>
+            <Heading scale={2}>COMPONENTS</Heading>
           </Box>
         </PageBanner>
         <Box>
@@ -68,15 +69,26 @@ export function Components() {
         </Box>
         <Box>
           <Label>Button</Label>
-          <Button>Click me</Button>
+          <Button aria-label="example">Click me</Button>
         </Box>
         <Box>
           <Label>Control</Label>
-          <Paragraph>...</Paragraph>
+          <Paragraph>
+            A generic component calling `useAtMediaMinWidth` with given styles.
+            This component can be used to control layout behaviour.
+          </Paragraph>
+          <Label element="h3">Control.tsx</Label>
+          <Code>{ControlRaw}</Code>
         </Box>
         <Box>
           <Label>Drawer</Label>
           <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Expander</Label>
+          <Expander title="Expander">
+            <Paragraph>...</Paragraph>
+          </Expander>
         </Box>
         <Box>
           <Label>Images</Label>

@@ -1,6 +1,4 @@
-import { ReactNode } from "react";
-import { breakpoint } from "../styles";
-import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
+import { CSSProperties, ReactNode } from "react";
 
 export const Paragraph = ({
   children,
@@ -11,16 +9,11 @@ export const Paragraph = ({
   first?: boolean;
   last?: boolean;
 }) => {
-  const paragraph = useAtMediaMinWidth({
-    0: {
-      fontSize: 20,
-      lineHeight: 1.25,
-      marginBottom: last ? 0 : 16,
-      marginTop: first ? 0 : 16,
-    },
-    [breakpoint]: {
-      fontSize: 24,
-    },
-  });
+  const paragraph: CSSProperties = {
+    fontSize: 16,
+    lineHeight: 20 / 16,
+    marginBottom: last ? 0 : 16,
+    marginTop: first ? 0 : 16,
+  };
   return <p style={paragraph}>{children}</p>;
 };

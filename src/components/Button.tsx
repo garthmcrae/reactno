@@ -27,10 +27,12 @@ const button: CSSProperties = {
 export const Button = forwardRef(
   (
     {
+      "aria-label": ariaLabel,
       children,
       onClick,
       type = "button",
     }: {
+      "aria-label": string;
       children: ReactNode;
       onClick?: (event: MouseEvent | TouchEvent) => void;
       type?: "button" | "submit";
@@ -40,7 +42,7 @@ export const Button = forwardRef(
     return (
       <button
         style={button}
-        aria-label="toggle"
+        aria-label={ariaLabel}
         onClick={onClick}
         ref={ref as Ref<HTMLButtonElement>}
         type={type}

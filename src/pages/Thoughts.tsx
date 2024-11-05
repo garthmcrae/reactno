@@ -9,7 +9,6 @@ import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import { Plane } from "../objects/Plane";
@@ -25,7 +24,7 @@ export function Thoughts() {
             <Plane />
           </Box>
           <Box>
-            <PageHeading>THOUGHTS</PageHeading>
+            <Heading scale={2}>THOUGHTS</Heading>
           </Box>
         </PageBanner>
         <Box>

@@ -13,7 +13,6 @@ import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Cube } from "../objects/Cube";
 
@@ -34,7 +33,7 @@ export function Root() {
             <Cube />
           </Box>
           <Box>
-            <PageHeading>**** YES</PageHeading>
+            <Heading scale={2}>**** YES</Heading>
           </Box>
         </PageBanner>
         <Box>
@@ -62,7 +61,8 @@ export function Root() {
               <Label element="h2">Warning</Label>
               <Paragraph first last>
                 React No is a work in progress and open to feedback. Please
-                checkout Github for the code.
+                checkout Github for the code and star if you like the idea. This
+                repository currently has {stars} stars. Thanks.
               </Paragraph>
             </Box>
           </Alert>

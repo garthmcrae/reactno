@@ -11,7 +11,6 @@ import { Hyperboloid } from "../objects/Hyperboloid";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import routesRaw from "../components/Routes?raw";
@@ -29,7 +28,7 @@ export function Routing() {
             <Hyperboloid />
           </Box>
           <Box>
-            <PageHeading>ROUTING</PageHeading>
+            <Heading scale={2}>ROUTING</Heading>
           </Box>
         </PageBanner>
         <Box>

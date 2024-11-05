@@ -2,8 +2,8 @@ import { CSSProperties } from "react";
 
 export const breakpoint = 960;
 
-export const borderWidth = 2;
-export const borderRadius = 0;
+export const borderWidth = 1;
+export const borderRadius = 1;
 
 export const border: CSSProperties = {
   borderColor: "currentcolor",
@@ -17,6 +17,8 @@ export const fadeInUp: CSSProperties = {
   animationDuration: "400ms",
   animationFillMode: "both",
 };
+
+export const fontSize = 16;
 
 export const padding = {
   paddingBottom: 8 - borderWidth,

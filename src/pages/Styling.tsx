@@ -11,7 +11,6 @@ import { Label } from "../components/Label";
 import { Octohedron } from "../objects/Octohedron";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
-import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
@@ -29,7 +28,7 @@ export function Styling() {
             <Octohedron />
           </Box>
           <Box>
-            <PageHeading>STYLING</PageHeading>
+            <Heading scale={2}>STYLING</Heading>
           </Box>
         </PageBanner>
         <Box>

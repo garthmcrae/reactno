@@ -21,6 +21,7 @@ export const PageBanner = ({ children }: { children: ReactNode }) => {
       <div>{children}</div>
       <div style={indicator}>
         <Button
+          aria-label="scroll"
           onClick={() => window.scrollBy({ top: 160, behavior: "smooth" })}
         >
           <Icon d={down} style={{ height: 24, width: 24 }} />
