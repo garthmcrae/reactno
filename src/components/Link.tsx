@@ -1,5 +1,5 @@
 import { CSSProperties, MouseEvent, ReactNode } from "react";
-import { border, padding } from "../styles";
+import { border, fontSize, padding } from "../styles";
 
 const link: CSSProperties = {
   ...border,
@@ -7,7 +7,7 @@ const link: CSSProperties = {
   color: "inherit",
   cursor: "pointer",
   display: "block",
-  fontSize: 24,
+  fontSize,
   lineHeight: 1,
   ...padding,
   textDecoration: "none",

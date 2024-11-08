@@ -6,7 +6,7 @@ import {
   Ref,
   TouchEvent,
 } from "react";
-import { border, padding } from "../styles";
+import { border, fontSize, padding } from "../styles";
 
 const button: CSSProperties = {
   appearance: "none",
@@ -17,7 +17,7 @@ const button: CSSProperties = {
   cursor: "pointer",
   display: "block",
   fontFamily: "inherit",
-  fontSize: 32,
+  fontSize,
   lineHeight: 1,
   ...padding,
   textAlign: "center",

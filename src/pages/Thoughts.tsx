@@ -8,7 +8,7 @@ import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
 import { Page } from "../components/Page";
-import { PageBanner } from "../components/PageBanner";
+import { Banner } from "../components/Banner";
 import { Paragraph } from "../components/Paragraph";
 
 import { Plane } from "../objects/Plane";
@@ -19,14 +19,16 @@ export function Thoughts() {
   return (
     <Page>
       <Container>
-        <PageBanner>
+        <Banner>
           <Box>
             <Plane />
           </Box>
           <Box>
-            <Heading scale={2}>THOUGHTS</Heading>
+            <Heading element="h1" scale={3}>
+              /thoughts/
+            </Heading>
           </Box>
-        </PageBanner>
+        </Banner>
         <Box>
           <Heading>Reactions</Heading>
         </Box>

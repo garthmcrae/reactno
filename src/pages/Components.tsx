@@ -3,7 +3,7 @@ import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 
-import { Alert } from "../components/Alert";
+import { Alert, AlertDismissable } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Button } from "../components/Button";
 import { Code } from "../components/Code";
@@ -13,7 +13,7 @@ import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Modal } from "../components/Modal";
 import { Page } from "../components/Page";
-import { PageBanner } from "../components/PageBanner";
+import { Banner } from "../components/Banner";
 import { Paragraph } from "../components/Paragraph";
 import { Image } from "../components/Image";
 import { Void } from "../objects/Void";
@@ -28,16 +28,18 @@ export function Components() {
   return (
     <Page>
       <Container>
-        <PageBanner>
+        <Banner>
           <Box>
             <Void />
           </Box>
           <Box>
-            <Heading scale={2}>COMPONENTS</Heading>
+            <Heading element="h1" scale={3}>
+              /components/
+            </Heading>
           </Box>
-        </PageBanner>
+        </Banner>
         <Box>
-          <Heading>Overreact</Heading>
+          <Heading>Children</Heading>
         </Box>
         <Box>
           <Paragraph>
@@ -58,14 +60,14 @@ export function Components() {
         </Box>
         <Box>
           <Label>Alert dismissable</Label>
-          <Alert dismissable>
+          <AlertDismissable>
             <Box>
               <Label element="h3">Alert</Label>
               <Paragraph first last>
                 This is a dismissable alert.
               </Paragraph>
             </Box>
-          </Alert>
+          </AlertDismissable>
         </Box>
         <Box>
           <Label>Button</Label>
@@ -87,7 +89,9 @@ export function Components() {
         <Box>
           <Label>Expander</Label>
           <Expander title="Expander">
-            <Paragraph>...</Paragraph>
+            <Box>
+              <Paragraph>...</Paragraph>
+            </Box>
           </Expander>
         </Box>
         <Box>

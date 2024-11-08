@@ -10,7 +10,7 @@ import { Heading } from "../components/Heading";
 import { Hyperboloid } from "../objects/Hyperboloid";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
-import { PageBanner } from "../components/PageBanner";
+import { Banner } from "../components/Banner";
 import { Paragraph } from "../components/Paragraph";
 
 import routesRaw from "../components/Routes?raw";
@@ -23,14 +23,16 @@ export function Routing() {
   return (
     <Page>
       <Container>
-        <PageBanner>
+        <Banner>
           <Box>
             <Hyperboloid />
           </Box>
           <Box>
-            <Heading scale={2}>ROUTING</Heading>
+            <Heading element="h1" scale={3}>
+              /routing/
+            </Heading>
           </Box>
-        </PageBanner>
+        </Banner>
         <Box>
           <Heading>Page found</Heading>
         </Box>

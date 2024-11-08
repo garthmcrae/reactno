@@ -10,7 +10,7 @@ import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Octohedron } from "../objects/Octohedron";
 import { Page } from "../components/Page";
-import { PageBanner } from "../components/PageBanner";
+import { Banner } from "../components/Banner";
 import { Paragraph } from "../components/Paragraph";
 
 import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
@@ -23,14 +23,16 @@ export function Styling() {
   return (
     <Page>
       <Container>
-        <PageBanner>
+        <Banner>
           <Box>
             <Octohedron />
           </Box>
           <Box>
-            <Heading scale={2}>STYLING</Heading>
+            <Heading element="h1" scale={3}>
+              /styling/
+            </Heading>
           </Box>
-        </PageBanner>
+        </Banner>
         <Box>
           <Heading>Get inline</Heading>
         </Box>

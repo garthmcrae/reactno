@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 export const breakpoint = 960;
 
 export const borderWidth = 1;
-export const borderRadius = 1;
+export const borderRadius = 0;
 
 export const border: CSSProperties = {
   borderColor: "currentcolor",

@@ -13,7 +13,7 @@ const drawer: CSSProperties = {
   ...border,
   padding: 14,
   position: "absolute",
-  right: -1 * (256 + 16),
+  right: -272,
   top: -4,
   transition: "background-color 100ms ease-in-out, transform 300ms ease-in-out",
   width: 224,
@@ -30,9 +30,9 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       display: "none",
     },
   });
+  const ref = useRef(null);
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
-  const ref = useRef(null);
   useOnClickOutside(ref, () => setToggle(false));
   const handleKeyPress = (event: KeyboardEvent) => {
     if (window.innerWidth > breakpoint) return;
@@ -65,7 +65,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       <div
         onClick={() => setToggle(false)}
         ref={ref}
-        style={{ ...drawer, transform: `translateX(${toggle ? -268 : 0}px)` }}
+        style={{ ...drawer, transform: `translateX(${toggle ? -272 : 0}px)` }}
       >
         {children}
       </div>

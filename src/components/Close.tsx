@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import { Icon, cross } from "./Icon";
-import { border } from "../styles";
+import { border, padding } from "../styles";
 
 const close: CSSProperties = {
   appearance: "none",
@@ -9,10 +9,7 @@ const close: CSSProperties = {
   color: "inherit",
   cursor: "pointer",
   display: "block",
-  paddingBottom: 0,
-  paddingLeft: 0,
-  paddingRight: 0,
-  paddingTop: 0,
+  ...padding,
   transition: "background-color 100ms ease-in-out, padding 100ms ease-in-out",
 };
 
@@ -28,8 +25,8 @@ export function Close({
       <Icon
         d={cross}
         style={{
-          height: 24,
-          width: 24,
+          height: 16,
+          width: 16,
         }}
       />
     </button>

@@ -4,10 +4,11 @@ import { Drawer } from "../components/Drawer";
 import { Label } from "../components/Label";
 import { Link } from "../components/Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
-import { fadeInUp } from "../styles";
+import { border, fadeInUp } from "../styles";
 
 const brand: CSSProperties = {
   backgroundColor: "var(--color)",
+  ...border,
   color: "var(--background-color)",
   display: "block",
   fontSize: 32,
@@ -23,13 +24,12 @@ const list: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   flexWrap: "nowrap",
-  gap: 16,
+  gap: 8,
   listStyle: "none",
   marginBottom: 0,
   marginTop: 0,
   paddingInlineStart: 0,
 };
-
 const nav: CSSProperties = {
   alignItems: "flex-start",
   display: "flex",

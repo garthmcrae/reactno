@@ -12,7 +12,7 @@ import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
-import { PageBanner } from "../components/PageBanner";
+import { Banner } from "../components/Banner";
 import { Paragraph } from "../components/Paragraph";
 import { Cube } from "../objects/Cube";
 
@@ -28,21 +28,18 @@ export function Root() {
   return (
     <Page>
       <Container>
-        <PageBanner>
+        <Banner>
           <Box>
             <Cube />
           </Box>
           <Box>
-            <Heading scale={2}>**** YES</Heading>
+            <Heading element="h1" scale={3}>
+              /
+            </Heading>
           </Box>
-        </PageBanner>
+        </Banner>
         <Box>
           <Heading>Hello world</Heading>
-        </Box>
-        <Box>
-          <Paragraph first last>
-            Github stars: {stars}
-          </Paragraph>
         </Box>
         <Box>
           <Paragraph first>

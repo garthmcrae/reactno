@@ -23,23 +23,23 @@ const icon: CSSProperties = {
   padding: 14,
 };
 
-const Static = ({ children }: { children: ReactNode }) => (
+export const Alert = ({ children }: { children: ReactNode }) => (
   <div style={alert} role="alert">
     <div style={icon}>
-      <Icon d={warn} style={{ height: 32, width: 32 }} />
+      <Icon d={warn} style={{ height: 44, width: 44 }} />
     </div>
     <div style={content}>{children}</div>
   </div>
 );
 
-const Dismissable = ({ children }: { children: ReactNode }) => {
+export const AlertDismissable = ({ children }: { children: ReactNode }) => {
   const [toggle, setToggle] = useState<boolean>(true);
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
   return (
     <Expand expand={toggle}>
       <div style={alert} role="alert">
         <div style={icon}>
-          <Icon d={warn} style={{ height: 32, width: 32 }} />
+          <Icon d={warn} style={{ height: 44, width: 44 }} />
         </div>
         <div style={content}>{children}</div>
         <div style={close}>
@@ -49,16 +49,3 @@ const Dismissable = ({ children }: { children: ReactNode }) => {
     </Expand>
   );
 };
-
-export const Alert = ({
-  children,
-  dismissable = false,
-}: {
-  children: ReactNode;
-  dismissable?: boolean;
-}) =>
-  dismissable ? (
-    <Dismissable children={children} />
-  ) : (
-    <Static children={children} />
-  );

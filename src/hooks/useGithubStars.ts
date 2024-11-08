@@ -19,11 +19,11 @@ const useGithubStars = (repo: string) => {
           stars: data.stargazers_count,
         });
       } catch (error) {
-        throw new Error('Error fetching');
         setState({
           status: 'error',
           stars: null,
         });
+        throw new Error('Error fetching');
       }
     };
 
