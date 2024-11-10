@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, useRef } from "react";
 import { Box } from "./Box";
 import { Button } from "./Button";
 import { Icon, down } from "./Icon";
@@ -16,8 +16,9 @@ const container: CSSProperties = {
 };
 
 export const Banner = ({ children }: { children: ReactNode }) => {
+  const ref = useRef<HTMLDivElement>(null);
   return (
-    <div style={container}>
+    <div ref={ref} style={container}>
       <>{children}</>
       <Box>
         <Paragraph>Version: {version} (Alpha)</Paragraph>
@@ -25,9 +26,16 @@ export const Banner = ({ children }: { children: ReactNode }) => {
       <Box>
         <Button
           aria-label="scroll"
-          onClick={() => window.scrollBy({ top: 160, behavior: "smooth" })}
+          onClick={() => {
+            if (ref.current) {
+              window.scrollBy({
+                top: ref.current.clientHeight,
+                behavior: "smooth",
+              });
+            }
+          }}
         >
-          <Icon d={down} style={{ height: 16, width: 16 }} />
+          <Icon d={down} style={{ height: 24, width: 24 }} />
         </Button>
       </Box>
     </div>

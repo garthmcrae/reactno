@@ -1,9 +1,11 @@
 import { CSSProperties } from "react";
-import { border } from "../styles";
+import { borderWidth } from "../styles";
 
 const slice: CSSProperties = {
   backfaceVisibility: "inherit",
-  ...border,
+  borderColor: "currentcolor",
+  borderWidth,
+  borderStyle: "solid",
   boxSizing: "border-box",
   position: "absolute",
 };

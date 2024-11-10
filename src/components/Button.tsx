@@ -18,6 +18,7 @@ const button: CSSProperties = {
   display: "block",
   fontFamily: "inherit",
   fontSize,
+  fontWeight: 700,
   lineHeight: 1,
   ...padding,
   textAlign: "center",

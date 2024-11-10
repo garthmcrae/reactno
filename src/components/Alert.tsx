@@ -26,7 +26,7 @@ const icon: CSSProperties = {
 export const Alert = ({ children }: { children: ReactNode }) => (
   <div style={alert} role="alert">
     <div style={icon}>
-      <Icon d={warn} style={{ height: 44, width: 44 }} />
+      <Icon d={warn} style={{ height: 32, width: 32 }} />
     </div>
     <div style={content}>{children}</div>
   </div>
@@ -39,7 +39,7 @@ export const AlertDismissable = ({ children }: { children: ReactNode }) => {
     <Expand expand={toggle}>
       <div style={alert} role="alert">
         <div style={icon}>
-          <Icon d={warn} style={{ height: 44, width: 44 }} />
+          <Icon d={warn} style={{ height: 32, width: 32 }} />
         </div>
         <div style={content}>{children}</div>
         <div style={close}>

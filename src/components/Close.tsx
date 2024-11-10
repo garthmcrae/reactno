@@ -25,8 +25,8 @@ export function Close({
       <Icon
         d={cross}
         style={{
-          height: 16,
-          width: 16,
+          height: 24,
+          width: 24,
         }}
       />
     </button>

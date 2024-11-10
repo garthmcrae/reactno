@@ -8,6 +8,7 @@ const link: CSSProperties = {
   cursor: "pointer",
   display: "block",
   fontSize,
+  fontWeight: 700,
   lineHeight: 1,
   ...padding,
   textDecoration: "none",
