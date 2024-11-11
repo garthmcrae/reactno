@@ -1,9 +1,10 @@
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useRef, useState } from "react";
 import { Button } from "./Button";
 import { Icon, lunch } from "./Icon";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 import { useOnClickOutside } from "../hooks/useClickOutside";
-import { border } from "../styles";
+import { border } from "../constants/styles";
+import { useOnKeydown } from "../hooks/useOnKeydown";
 
 const container: CSSProperties = {
   position: "relative",
@@ -32,23 +33,9 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
   });
   const ref = useRef(null);
   const [toggle, setToggle] = useState(false);
-  const handleToggle = () => setToggle((prevToggle) => !prevToggle);
+  const handleToggle = () => setToggle((value) => !value);
   useOnClickOutside(ref, () => setToggle(false));
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (window.innerWidth > breakpoint) return;
-    if (event.code === "Equal") {
-      handleToggle();
-    }
-    if (event.code === "Escape") {
-      setToggle(false);
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyPress);
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-    };
-  }, []);
+  useOnKeydown("Equal", handleToggle);
   return (
     <div style={container}>
       <div style={control}>

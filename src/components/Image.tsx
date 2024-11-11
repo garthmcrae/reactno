@@ -1,5 +1,5 @@
 import { useState, useEffect, CSSProperties } from "react";
-import { HTMLImageConstructor } from "../utilities/HTMLImageConstructor";
+import { HTMLImageConstructor } from "../constants/HTMLImageConstructor";
 
 export const Image = ({ url }: { url: string }) => {
   const [imageLoaded, setImageLoaded] = useState(false);

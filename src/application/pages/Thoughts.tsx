@@ -3,17 +3,17 @@ import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
 
-import { Box } from "../components/Box";
-import { Code } from "../components/Code";
-import { Container } from "../components/Container";
-import { Heading } from "../components/Heading";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
+import { Box } from "../../components/Box";
+import { Code } from "../../components/Code";
+import { Container } from "../../components/Container";
+import { Heading } from "../../components/Heading";
+import { Page } from "../../components/Page";
+import { Banner } from "../../components/Banner";
+import { Paragraph } from "../../components/Paragraph";
 
 import { Plane } from "../objects/Plane";
 
-import buildRaw from "../build.txt?raw";
+import buildRaw from "../../build.txt?raw";
 
 export function Thoughts() {
   return (

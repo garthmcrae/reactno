@@ -3,21 +3,21 @@ import { Components } from "../cards/Components";
 import { Thoughts } from "../cards/Thoughts";
 import { Styling } from "../cards/Styling";
 
-import { Box } from "../components/Box";
-import { Code } from "../components/Code";
-import { Container } from "../components/Container";
-import { Heading } from "../components/Heading";
+import { Box } from "../../components/Box.tsx";
+import { Code } from "../../components/Code.tsx";
+import { Container } from "../../components/Container.tsx";
+import { Heading } from "../../components/Heading.tsx";
 import { Hyperboloid } from "../objects/Hyperboloid";
-import { Label } from "../components/Label";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
+import { Label } from "../../components/Label.tsx";
+import { Page } from "../../components/Page.tsx";
+import { Banner } from "../../components/Banner.tsx";
+import { Paragraph } from "../../components/Paragraph.tsx";
 
-import routesRaw from "../components/Routes?raw";
-import routerRaw from "../Router.tsx?raw";
-import useGoToPathnameRaw from "../hooks/useGoToPathname.ts?raw";
-import useWindowLocationPathnameRaw from "../hooks/useWindowLocationPathname.ts?raw";
-import windowLocationPathnameContextRaw from "../contexts/WindowLocationPathnameContext.tsx?raw";
+import routerRaw from "../../components/Router.tsx?raw";
+import routesRaw from "../Routes.tsx?raw";
+import useGoToPathnameRaw from "../../hooks/useGoToPathname.ts?raw";
+import useWindowLocationPathnameRaw from "../../hooks/useWindowLocationPathname.ts?raw";
+import windowLocationPathnameContextRaw from "../../contexts/WindowLocationPathnameContext.tsx?raw";
 
 export function Routing() {
   return (

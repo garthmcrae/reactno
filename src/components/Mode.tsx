@@ -1,7 +1,7 @@
 import { CSSProperties, useEffect, useState } from "react";
 import { Button } from "./Button";
 import { Label } from "./Label";
-import { border, breakpoint } from "../styles";
+import { border, breakpoint } from "../constants/styles";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 
 const container: CSSProperties = {

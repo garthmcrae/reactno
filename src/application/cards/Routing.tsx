@@ -1,7 +1,7 @@
 import { CardLayout } from "./CardLayout";
-import { Card } from "../components/Card";
+import { Card } from "../../components/Card";
 import { Hyperboloid } from "../objects/Hyperboloid";
-import { useGoToPathname } from "../hooks/useGoToPathname";
+import { useGoToPathname } from "../../hooks/useGoToPathname";
 
 export const Routing = () => {
   const goToPathname = useGoToPathname();

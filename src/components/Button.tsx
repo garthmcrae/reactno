@@ -6,7 +6,7 @@ import {
   Ref,
   TouchEvent,
 } from "react";
-import { border, fontSize, padding } from "../styles";
+import { border, fontSize, padding } from "../constants/styles";
 
 const button: CSSProperties = {
   appearance: "none",

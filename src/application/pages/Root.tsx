@@ -5,19 +5,19 @@ import { Components } from "../cards/Components";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
 
-import { Alert } from "../components/Alert";
-import { Box } from "../components/Box";
-import { Code } from "../components/Code";
-import { Container } from "../components/Container";
-import { Heading } from "../components/Heading";
-import { Label } from "../components/Label";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
+import { Alert } from "../../components/Alert";
+import { Box } from "../../components/Box";
+import { Code } from "../../components/Code";
+import { Container } from "../../components/Container";
+import { Heading } from "../../components/Heading";
+import { Label } from "../../components/Label";
+import { Page } from "../../components/Page";
+import { Banner } from "../../components/Banner";
+import { Paragraph } from "../../components/Paragraph";
 import { Cube } from "../objects/Cube";
 
-import packageRaw from "../../package.json?raw";
-import useGithubStars from "../hooks/useGithubStars";
+import packageRaw from "../../../package.json?raw";
+import useGithubStars from "../../hooks/useGithubStars";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>

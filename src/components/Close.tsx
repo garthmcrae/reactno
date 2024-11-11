@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import { Icon, cross } from "./Icon";
-import { border, padding } from "../styles";
+import { border, padding } from "../constants/styles";
 
 const close: CSSProperties = {
   appearance: "none",

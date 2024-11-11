@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { borderWidth } from "../styles";
+import { borderWidth } from "../../constants/styles";
 
 const slice: CSSProperties = {
   backfaceVisibility: "inherit",

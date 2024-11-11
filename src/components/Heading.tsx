@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
-import { breakpoint, fontSize } from "../styles";
+import { breakpoint, fontSize } from "../constants/styles";
 
 export const Heading = ({
   children,

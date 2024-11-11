@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode, useState } from "react";
 import { Close } from "./Close";
 import { Expand } from "./Expand";
 import { Icon, warn } from "./Icon";
-import { border } from "../styles";
+import { border } from "../constants/styles";
 
 const alert: CSSProperties = {
   alignItems: "flex-start",
@@ -34,7 +34,6 @@ export const Alert = ({ children }: { children: ReactNode }) => (
 
 export const AlertDismissable = ({ children }: { children: ReactNode }) => {
   const [toggle, setToggle] = useState<boolean>(true);
-  const handleToggle = () => setToggle((prevToggle) => !prevToggle);
   return (
     <Expand expand={toggle}>
       <div style={alert} role="alert">
@@ -43,7 +42,10 @@ export const AlertDismissable = ({ children }: { children: ReactNode }) => {
         </div>
         <div style={content}>{children}</div>
         <div style={close}>
-          <Close aria-label="dismiss" onClick={handleToggle} />
+          <Close
+            aria-label="dismiss"
+            onClick={() => setToggle((value) => !value)}
+          />
         </div>
       </div>
     </Expand>

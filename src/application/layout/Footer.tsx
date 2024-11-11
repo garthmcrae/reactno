@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
-import { Box } from "../components/Box";
-import { Container } from "../components/Container";
+import { Box } from "../../components/Box";
+import { Container } from "../../components/Container";
 
 const footer: CSSProperties = {
   justifySelf: "flex-end",

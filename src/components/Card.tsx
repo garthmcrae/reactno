@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
-import { border } from "../styles";
+import { border } from "../constants/styles";
 
 const link: CSSProperties = {
   ...border,

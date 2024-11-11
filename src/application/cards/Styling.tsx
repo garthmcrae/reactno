@@ -1,7 +1,7 @@
 import { CardLayout } from "./CardLayout";
-import { Card } from "../components/Card";
+import { Card } from "../../components/Card";
 import { Octohedron } from "../objects/Octohedron";
-import { useGoToPathname } from "../hooks/useGoToPathname";
+import { useGoToPathname } from "../../hooks/useGoToPathname";
 
 export const Styling = () => {
   const goToPathname = useGoToPathname();

@@ -21,7 +21,7 @@ export const Banner = ({ children }: { children: ReactNode }) => {
     <div ref={ref} style={container}>
       <>{children}</>
       <Box>
-        <Paragraph>Version: {version} (Alpha)</Paragraph>
+        <Paragraph>React No. Version: {version} (Alpha)</Paragraph>
       </Box>
       <Box>
         <Button

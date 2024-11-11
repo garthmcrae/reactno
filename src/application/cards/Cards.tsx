@@ -1,17 +1,17 @@
 import { ReactNode } from "react";
 
-import { Control } from "../components/Control";
+import { AtMediaMinWidth } from "../../components/AtMediaMinWidth";
 
 export function Cards({ children }: { children: ReactNode[] }) {
   return (
-    <Control
+    <AtMediaMinWidth
       style={{
         0: { display: "flex", flexDirection: "column", gap: 16 },
         932: { flexDirection: "row" },
       }}
     >
       {children.map((card, index) => (
-        <Control
+        <AtMediaMinWidth
           key={`article${index}`}
           style={{
             932: {
@@ -22,8 +22,8 @@ export function Cards({ children }: { children: ReactNode[] }) {
           }}
         >
           {card}
-        </Control>
+        </AtMediaMinWidth>
       ))}
-    </Control>
+    </AtMediaMinWidth>
   );
 }

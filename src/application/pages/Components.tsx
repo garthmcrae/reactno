@@ -3,25 +3,25 @@ import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 
-import { Alert, AlertDismissable } from "../components/Alert";
-import { Box } from "../components/Box";
-import { Button } from "../components/Button";
-import { Code } from "../components/Code";
-import { Container } from "../components/Container";
-import { Expander } from "../components/Expander";
-import { Heading } from "../components/Heading";
-import { Label } from "../components/Label";
-import { Modal } from "../components/Modal";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
-import { Image } from "../components/Image";
+import { Alert, AlertDismissable } from "../../components/Alert";
+import { Box } from "../../components/Box";
+import { Button } from "../../components/Button";
+import { Code } from "../../components/Code";
+import { Container } from "../../components/Container";
+import { Expander } from "../../components/Expander";
+import { Heading } from "../../components/Heading";
+import { Label } from "../../components/Label";
+import { Modal } from "../../components/Modal";
+import { Page } from "../../components/Page";
+import { Banner } from "../../components/Banner";
+import { Paragraph } from "../../components/Paragraph";
+import { Image } from "../../components/Image";
 import { Void } from "../objects/Void";
 
-import ControlRaw from "../components/Control.tsx?raw";
-import focusTrapRaw from "../components/FocusTrap.tsx?raw";
-import modalRaw from "../components/Modal.tsx?raw";
-import imageRaw from "../components/Image.tsx?raw";
+import AtMediaMinWidthRaw from "../../components/AtMediaMinWidth.tsx?raw";
+import focusTrapRaw from "../../components/FocusTrap.tsx?raw";
+import modalRaw from "../../components/Modal.tsx?raw";
+import imageRaw from "../../components/Image.tsx?raw";
 import hyperboloidRaw from "../objects/Hyperboloid.tsx?raw";
 
 export function Components() {
@@ -70,17 +70,17 @@ export function Components() {
           </AlertDismissable>
         </Box>
         <Box>
-          <Label>Button</Label>
-          <Button aria-label="example">Click me</Button>
-        </Box>
-        <Box>
-          <Label>Control</Label>
+          <Label>AtMediaMinWidth</Label>
           <Paragraph>
             A generic component calling `useAtMediaMinWidth` with given styles.
             This component can be used to control layout behaviour.
           </Paragraph>
-          <Label element="h3">Control.tsx</Label>
-          <Code>{ControlRaw}</Code>
+          <Label element="h3">AtMediaMinWidth.tsx</Label>
+          <Code>{AtMediaMinWidthRaw}</Code>
+        </Box>
+        <Box>
+          <Label>Button</Label>
+          <Button aria-label="example">Click me</Button>
         </Box>
         <Box>
           <Label>Drawer</Label>

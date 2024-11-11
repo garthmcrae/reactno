@@ -1,5 +1,5 @@
 import { CSSProperties, MouseEvent, ReactNode } from "react";
-import { border, fontSize, padding } from "../styles";
+import { border, fontSize, padding } from "../constants/styles";
 
 const link: CSSProperties = {
   ...border,

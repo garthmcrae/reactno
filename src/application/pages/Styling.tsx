@@ -3,21 +3,21 @@ import { Components } from "../cards/Components";
 import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
 
-import { Box } from "../components/Box";
-import { Code } from "../components/Code";
-import { Container } from "../components/Container";
-import { Heading } from "../components/Heading";
-import { Label } from "../components/Label";
+import { Box } from "../../components/Box";
+import { Code } from "../../components/Code";
+import { Container } from "../../components/Container";
+import { Heading } from "../../components/Heading";
+import { Label } from "../../components/Label";
 import { Octohedron } from "../objects/Octohedron";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
+import { Page } from "../../components/Page";
+import { Banner } from "../../components/Banner";
+import { Paragraph } from "../../components/Paragraph";
 
-import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
-import headingRaw from "../components/Heading.tsx?raw";
-import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?raw";
-import useAtMediaMinWidthRaw from "../hooks/useAtMediaMinWidth.ts?raw";
-import useWindowInnerWidthRaw from "../hooks/useWindowInnerWidth.ts?raw";
+import atMediaMinWidthRaw from "../../logic/atMediaMinWidth.ts?raw";
+import headingRaw from "../../components/Heading.tsx?raw";
+import windowInnerWidthContextRaw from "../../contexts/WindowInnerWidthContext.tsx?raw";
+import useAtMediaMinWidthRaw from "../../hooks/useAtMediaMinWidth.ts?raw";
+import useWindowInnerWidthRaw from "../../hooks/useWindowInnerWidth.ts?raw";
 
 export function Styling() {
   return (

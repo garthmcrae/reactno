@@ -1,4 +1,4 @@
-import { Routes } from "./components/Routes";
+import { Router } from "../components/Router";
 
 import { Components } from "./pages/Components";
 import { NotFound } from "./pages/NotFound";
@@ -7,9 +7,9 @@ import { Root } from "./pages/Root";
 import { Routing } from "./pages/Routing";
 import { Styling } from "./pages/Styling";
 
-export function Router() {
+export function Routes() {
   return (
-    <Routes>
+    <Router>
       {{
         "/": <Root />,
         "/components/": <Components />,
@@ -18,6 +18,6 @@ export function Router() {
         "/routing/": <Routing />,
         "/styling/": <Styling />,
       }}
-    </Routes>
+    </Router>
   );
 }

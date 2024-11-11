@@ -1,7 +1,7 @@
 import { CSSProperties, JSX, ReactNode } from "react";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 
-export const Control = ({
+export const AtMediaMinWidth = ({
   children,
   element = "div",
   style = {},

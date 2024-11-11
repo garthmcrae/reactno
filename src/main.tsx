@@ -1,5 +1,5 @@
 import "preact/debug";
 import { render } from "preact";
-import { App } from "./App.tsx";
+import { Application } from "./application/index.tsx";
 
-render(<App />, document.getElementById("root")!);
+render(<Application />, document.getElementById("root")!);

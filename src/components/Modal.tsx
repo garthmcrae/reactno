@@ -1,9 +1,10 @@
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "./Button";
 import { Close } from "./Close";
 import { FocusTrap } from "./FocusTrap";
-import { border, fadeInUp, padding } from "../styles";
+import { border, animationFadeInUp, padding } from "../constants/styles";
+import { useOnKeydown } from "../hooks/useOnKeydown";
 
 const close: CSSProperties = {
   position: "absolute",
@@ -52,17 +53,7 @@ export function Modal({
       ref.current.focus();
     }
   };
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.code === "Escape") {
-        handleHideModal();
-      }
-    };
-    document.addEventListener("keydown", handleKeyPress);
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-    };
-  }, []);
+  useOnKeydown("Escape", handleHideModal);
   return (
     <>
       <Button aria-label="show modal" ref={ref} onClick={handleShowModal}>
@@ -72,7 +63,7 @@ export function Modal({
         createPortal(
           <div style={modal}>
             <FocusTrap>
-              <div style={fadeInUp}>
+              <div style={animationFadeInUp}>
                 <div style={content}>
                   {children}
                   <div style={close}>

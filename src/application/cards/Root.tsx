@@ -1,7 +1,7 @@
 import { CardLayout } from "./CardLayout";
-import { Card } from "../components/Card";
+import { Card } from "../../components/Card";
 import { Cube } from "../objects/Cube";
-import { useGoToPathname } from "../hooks/useGoToPathname";
+import { useGoToPathname } from "../../hooks/useGoToPathname";
 
 export const Root = () => {
   const goToPathname = useGoToPathname();

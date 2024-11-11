@@ -1,9 +1,9 @@
-import { Box } from "../components/Box";
-import { Container } from "../components/Container";
-import { Heading } from "../components/Heading";
-import { Page } from "../components/Page";
-import { Banner } from "../components/Banner";
-import { Paragraph } from "../components/Paragraph";
+import { Box } from "../../components/Box";
+import { Container } from "../../components/Container";
+import { Heading } from "../../components/Heading";
+import { Page } from "../../components/Page";
+import { Banner } from "../../components/Banner";
+import { Paragraph } from "../../components/Paragraph";
 import { Void } from "../objects/Void";
 
 export function NotFound() {

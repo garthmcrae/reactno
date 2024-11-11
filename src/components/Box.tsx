@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
-import { breakpoint } from "../styles";
+import { breakpoint } from "../constants/styles";
 
 export const Box = ({ children }: { children: ReactNode }) => {
   const box = useAtMediaMinWidth({

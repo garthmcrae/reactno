@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
-import { Box } from "../components/Box";
-import { Control } from "../components/Control";
-import { Label } from "../components/Label";
-import { Paragraph } from "../components/Paragraph";
+import { AtMediaMinWidth } from "../../components/AtMediaMinWidth";
+import { Box } from "../../components/Box";
+import { Label } from "../../components/Label";
+import { Paragraph } from "../../components/Paragraph";
 
 export const CardLayout = ({
   label,
@@ -14,7 +14,7 @@ export const CardLayout = ({
   paragraph: string;
 }) => {
   return (
-    <Control
+    <AtMediaMinWidth
       style={{
         0: {
           alignItems: "unset",
@@ -39,6 +39,6 @@ export const CardLayout = ({
           {paragraph}
         </Paragraph>
       </Box>
-    </Control>
+    </AtMediaMinWidth>
   );
 };
