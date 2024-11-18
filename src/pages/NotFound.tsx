@@ -1,18 +1,19 @@
-import { Box } from "../../components/Box";
-import { Container } from "../../components/Container";
-import { Heading } from "../../components/Heading";
-import { Page } from "../../components/Page";
-import { Banner } from "../../components/Banner";
-import { Paragraph } from "../../components/Paragraph";
-import { Void } from "../objects/Void";
+import { Box } from "../components/Box";
+import { Container } from "../components/Container";
+import { Heading } from "../components/Heading";
+import { Page } from "../components/Page";
+import { Banner } from "../components/Banner";
+import { Paragraph } from "../components/Paragraph";
 
-export function NotFound() {
+import { Object, field } from "../components/Object";
+
+export const NotFound = () => {
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Void />
+            <Object>{field}</Object>
           </Box>
           <Box>
             <Heading scale={2}>****</Heading>
@@ -27,4 +28,4 @@ export function NotFound() {
       </Container>
     </Page>
   );
-}
+};

@@ -1,9 +1,9 @@
 import { Layout } from "./layout/Layout";
-import { WindowInnerWidthContextProvider } from "../contexts/WindowInnerWidthContext";
-import { WindowLocationPathnameContextProvider } from "../contexts/WindowLocationPathnameContext";
+import { WindowInnerWidthContextProvider } from "./contexts/WindowInnerWidthContext";
+import { WindowLocationPathnameContextProvider } from "./contexts/WindowLocationPathnameContext";
 import { Routes } from "./Routes";
 
-export function Application() {
+export const Application = () => {
   return (
     <WindowLocationPathnameContextProvider>
       <WindowInnerWidthContextProvider>
@@ -13,4 +13,4 @@ export function Application() {
       </WindowInnerWidthContextProvider>
     </WindowLocationPathnameContextProvider>
   );
-}
+};

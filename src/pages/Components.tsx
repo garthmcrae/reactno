@@ -1,36 +1,36 @@
-import { Cards } from "../cards/Cards";
-import { Thoughts } from "../cards/Thoughts";
-import { Root } from "../cards/Root";
-import { Routing } from "../cards/Routing";
+import { Alert, AlertDismissable } from "../components/Alert";
+import { Box } from "../components/Box";
+import { Button } from "../components/Button";
+import { Code } from "../components/Code";
+import { Container } from "../components/Container";
+import { Expander } from "../components/Expander";
+import { Heading } from "../components/Heading";
+import { Label } from "../components/Label";
+import { Modal } from "../components/Modal";
+import { Page } from "../components/Page";
+import { Banner } from "../components/Banner";
+import { Paragraph } from "../components/Paragraph";
+import { Image } from "../components/Image";
 
-import { Alert, AlertDismissable } from "../../components/Alert";
-import { Box } from "../../components/Box";
-import { Button } from "../../components/Button";
-import { Code } from "../../components/Code";
-import { Container } from "../../components/Container";
-import { Expander } from "../../components/Expander";
-import { Heading } from "../../components/Heading";
-import { Label } from "../../components/Label";
-import { Modal } from "../../components/Modal";
-import { Page } from "../../components/Page";
-import { Banner } from "../../components/Banner";
-import { Paragraph } from "../../components/Paragraph";
-import { Image } from "../../components/Image";
-import { Void } from "../objects/Void";
+import { Articles } from "../layout/Articles";
 
-import AtMediaMinWidthRaw from "../../components/AtMediaMinWidth.tsx?raw";
-import focusTrapRaw from "../../components/FocusTrap.tsx?raw";
-import modalRaw from "../../components/Modal.tsx?raw";
-import imageRaw from "../../components/Image.tsx?raw";
-import hyperboloidRaw from "../objects/Hyperboloid.tsx?raw";
+import { Object, field } from "../components/Object";
 
-export function Components() {
+import AtMediaMinWidthRaw from "../components/AtMediaMinWidth.tsx?raw";
+import focusTrapRaw from "../components/FocusTrap.tsx?raw";
+import imageRaw from "../components/Image.tsx?raw";
+import modalRaw from "../components/Modal.tsx?raw";
+import objectRaw from "../components/Object.tsx?raw";
+
+import { thoughts, root, routing } from "../constants/articles";
+
+export const Components = () => {
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Void />
+            <Object>{field}</Object>
           </Box>
           <Box>
             <Heading element="h1" scale={3}>
@@ -205,20 +205,20 @@ export function Components() {
           <Paragraph first last>
             The header and card are not GIFs would you believe. All the styles
             are inline CSS properties with the exception of the keyframe
-            animations. Pretty cool.
+            animations.
           </Paragraph>
         </Box>
         <Box>
           <Label>Hyperboloid.tsx</Label>
-          <Code>{hyperboloidRaw}</Code>
+          <Code>{objectRaw}</Code>
         </Box>
         <Box>
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Cards>{[<Thoughts />, <Root />, <Routing />]}</Cards>
+          <Articles>{[thoughts, root, routing]}</Articles>
         </Box>
       </Container>
     </Page>
   );
-}
+};

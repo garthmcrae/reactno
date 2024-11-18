@@ -13,13 +13,13 @@ const close: CSSProperties = {
   transition: "background-color 100ms ease-in-out, padding 100ms ease-in-out",
 };
 
-export function Close({
+export const Close = ({
   "aria-label": ariaLabel,
   onClick,
 }: {
   "aria-label": string;
   onClick?: () => void;
-}) {
+}) => {
   return (
     <button style={close} aria-label={ariaLabel} onClick={onClick}>
       <Icon
@@ -31,4 +31,4 @@ export function Close({
       />
     </button>
   );
-}
+};

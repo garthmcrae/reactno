@@ -9,9 +9,6 @@ export const useOnKeydown = (
       if (event.code === key) {
         handler();
       }
-      if (event.code === "Escape") {
-        handler();
-      }
     };
     document.addEventListener("keydown", listener);
     return () => {

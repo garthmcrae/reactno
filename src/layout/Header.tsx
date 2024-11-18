@@ -1,10 +1,10 @@
 import { CSSProperties } from "react";
-import { Container } from "../../components/Container";
-import { Drawer } from "../../components/Drawer";
-import { Label } from "../../components/Label";
-import { Link } from "../../components/Link";
-import { useGoToPathname } from "../../hooks/useGoToPathname";
-import { border, animationFadeInUp } from "../../constants/styles";
+import { Container } from "../components/Container";
+import { Drawer } from "../components/Drawer";
+import { Label } from "../components/Label";
+import { Link } from "../components/Link";
+import { useGoToPathname } from "../hooks/useGoToPathname";
+import { border, animationFadeInUp } from "../constants/styles";
 
 const brand: CSSProperties = {
   backgroundColor: "var(--color)",

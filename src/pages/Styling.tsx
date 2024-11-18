@@ -1,31 +1,31 @@
-import { Cards } from "../cards/Cards";
-import { Components } from "../cards/Components";
-import { Thoughts } from "../cards/Thoughts";
-import { Root } from "../cards/Root";
+import { Box } from "../components/Box";
+import { Code } from "../components/Code";
+import { Container } from "../components/Container";
+import { Heading } from "../components/Heading";
+import { Label } from "../components/Label";
+import { Page } from "../components/Page";
+import { Banner } from "../components/Banner";
+import { Paragraph } from "../components/Paragraph";
 
-import { Box } from "../../components/Box";
-import { Code } from "../../components/Code";
-import { Container } from "../../components/Container";
-import { Heading } from "../../components/Heading";
-import { Label } from "../../components/Label";
-import { Octohedron } from "../objects/Octohedron";
-import { Page } from "../../components/Page";
-import { Banner } from "../../components/Banner";
-import { Paragraph } from "../../components/Paragraph";
+import { Articles } from "../layout/Articles";
 
-import atMediaMinWidthRaw from "../../logic/atMediaMinWidth.ts?raw";
-import headingRaw from "../../components/Heading.tsx?raw";
-import windowInnerWidthContextRaw from "../../contexts/WindowInnerWidthContext.tsx?raw";
-import useAtMediaMinWidthRaw from "../../hooks/useAtMediaMinWidth.ts?raw";
-import useWindowInnerWidthRaw from "../../hooks/useWindowInnerWidth.ts?raw";
+import { Object, octohedron } from "../components/Object";
 
-export function Styling() {
+import atMediaMinWidthRaw from "../logic/atMediaMinWidth.ts?raw";
+import headingRaw from "../components/Heading.tsx?raw";
+import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?raw";
+import useAtMediaMinWidthRaw from "../hooks/useAtMediaMinWidth.ts?raw";
+import useWindowInnerWidthRaw from "../hooks/useWindowInnerWidth.ts?raw";
+
+import { components, thoughts, root } from "../constants/articles";
+
+export const Styling = () => {
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Octohedron />
+            <Object>{octohedron}</Object>
           </Box>
           <Box>
             <Heading element="h1" scale={3}>
@@ -139,9 +139,9 @@ const styles: CSSProperties = {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Cards>{[<Components />, <Thoughts />, <Root />]}</Cards>
+          <Articles>{[components, thoughts, root]}</Articles>
         </Box>
       </Container>
     </Page>
   );
-}
+};

@@ -1,31 +1,31 @@
-import { Cards } from "../cards/Cards";
-import { Components } from "../cards/Components";
-import { Thoughts } from "../cards/Thoughts";
-import { Styling } from "../cards/Styling";
+import { Box } from "../components/Box.tsx";
+import { Code } from "../components/Code.tsx";
+import { Container } from "../components/Container.tsx";
+import { Heading } from "../components/Heading.tsx";
+import { Label } from "../components/Label.tsx";
+import { Page } from "../components/Page.tsx";
+import { Banner } from "../components/Banner.tsx";
+import { Paragraph } from "../components/Paragraph.tsx";
 
-import { Box } from "../../components/Box.tsx";
-import { Code } from "../../components/Code.tsx";
-import { Container } from "../../components/Container.tsx";
-import { Heading } from "../../components/Heading.tsx";
-import { Hyperboloid } from "../objects/Hyperboloid";
-import { Label } from "../../components/Label.tsx";
-import { Page } from "../../components/Page.tsx";
-import { Banner } from "../../components/Banner.tsx";
-import { Paragraph } from "../../components/Paragraph.tsx";
+import { Articles } from "../layout/Articles.tsx";
 
-import routerRaw from "../../components/Router.tsx?raw";
+import { Object, hyperboloid } from "../components/Object.tsx";
+
+import routerRaw from "../components/Router.tsx?raw";
 import routesRaw from "../Routes.tsx?raw";
-import useGoToPathnameRaw from "../../hooks/useGoToPathname.ts?raw";
-import useWindowLocationPathnameRaw from "../../hooks/useWindowLocationPathname.ts?raw";
-import windowLocationPathnameContextRaw from "../../contexts/WindowLocationPathnameContext.tsx?raw";
+import useGoToPathnameRaw from "../hooks/useGoToPathname.ts?raw";
+import useWindowLocationPathnameRaw from "../hooks/useWindowLocationPathname.ts?raw";
+import windowLocationPathnameContextRaw from "../contexts/WindowLocationPathnameContext.tsx?raw";
 
-export function Routing() {
+import { styling, components, thoughts } from "../constants/articles.tsx";
+
+export const Routing = () => {
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Hyperboloid />
+            <Object>{hyperboloid}</Object>
           </Box>
           <Box>
             <Heading element="h1" scale={3}>
@@ -101,9 +101,9 @@ export function Routing() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Cards>{[<Styling />, <Components />, <Thoughts />]}</Cards>
+          <Articles>{[styling, components, thoughts]}</Articles>
         </Box>
       </Container>
     </Page>
   );
-}
+};

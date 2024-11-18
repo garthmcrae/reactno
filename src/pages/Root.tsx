@@ -1,36 +1,36 @@
 import { ReactNode } from "react";
 
-import { Cards } from "../cards/Cards";
-import { Components } from "../cards/Components";
-import { Routing } from "../cards/Routing";
-import { Styling } from "../cards/Styling";
+import { Alert } from "../components/Alert";
+import { Box } from "../components/Box";
+import { Code } from "../components/Code";
+import { Container } from "../components/Container";
+import { Heading } from "../components/Heading";
+import { Label } from "../components/Label";
+import { Page } from "../components/Page";
+import { Banner } from "../components/Banner";
+import { Paragraph } from "../components/Paragraph";
 
-import { Alert } from "../../components/Alert";
-import { Box } from "../../components/Box";
-import { Code } from "../../components/Code";
-import { Container } from "../../components/Container";
-import { Heading } from "../../components/Heading";
-import { Label } from "../../components/Label";
-import { Page } from "../../components/Page";
-import { Banner } from "../../components/Banner";
-import { Paragraph } from "../../components/Paragraph";
-import { Cube } from "../objects/Cube";
+import { Object, cube } from "../components/Object";
 
-import packageRaw from "../../../package.json?raw";
-import useGithubStars from "../../hooks/useGithubStars";
+import { Articles } from "../layout/Articles";
+
+import { routing, styling, components } from "../constants/articles";
+
+import packageRaw from "../../package.json?raw";
+import useGithubStars from "../hooks/useGithubStars";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
 );
 
-export function Root() {
+export const Root = () => {
   const { stars } = useGithubStars("garthmcrae/reactno");
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Cube />
+            <Object>{cube}</Object>
           </Box>
           <Box>
             <Heading element="h1" scale={3}>
@@ -110,9 +110,9 @@ import packageRaw from "../../package.json?raw";
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Cards>{[<Routing />, <Styling />, <Components />]}</Cards>
+          <Articles>{[routing, styling, components]}</Articles>
         </Box>
       </Container>
     </Page>
   );
-}
+};

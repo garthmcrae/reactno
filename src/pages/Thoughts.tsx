@@ -1,27 +1,26 @@
-import { Cards } from "../cards/Cards";
-import { Root } from "../cards/Root";
-import { Routing } from "../cards/Routing";
-import { Styling } from "../cards/Styling";
+import { Box } from "../components/Box";
+import { Code } from "../components/Code";
+import { Container } from "../components/Container";
+import { Heading } from "../components/Heading";
+import { Page } from "../components/Page";
+import { Banner } from "../components/Banner";
+import { Paragraph } from "../components/Paragraph";
 
-import { Box } from "../../components/Box";
-import { Code } from "../../components/Code";
-import { Container } from "../../components/Container";
-import { Heading } from "../../components/Heading";
-import { Page } from "../../components/Page";
-import { Banner } from "../../components/Banner";
-import { Paragraph } from "../../components/Paragraph";
+import { Articles } from "../layout/Articles";
 
-import { Plane } from "../objects/Plane";
+import { Object, plane } from "../components/Object";
 
-import buildRaw from "../../build.txt?raw";
+import buildRaw from "../build.txt?raw";
 
-export function Thoughts() {
+import { root, routing, styling } from "../constants/articles";
+
+export const Thoughts = () => {
   return (
     <Page>
       <Container>
         <Banner>
           <Box>
-            <Plane />
+            <Object>{plane}</Object>
           </Box>
           <Box>
             <Heading element="h1" scale={3}>
@@ -137,9 +136,9 @@ export function Thoughts() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Cards>{[<Root />, <Routing />, <Styling />]}</Cards>
+          <Articles>{[root, routing, styling]}</Articles>
         </Box>
       </Container>
     </Page>
   );
-}
+};

@@ -31,7 +31,7 @@ const modal: CSSProperties = {
   zIndex: 2,
 };
 
-export function Modal({
+export const Modal = ({
   children,
   name,
   nested,
@@ -39,7 +39,7 @@ export function Modal({
   children: ReactNode;
   name: string;
   nested?: boolean;
-}) {
+}) => {
   const ref = useRef<HTMLButtonElement>(null);
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => {
@@ -77,4 +77,4 @@ export function Modal({
         )}
     </>
   );
-}
+};
