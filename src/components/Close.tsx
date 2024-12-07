@@ -6,11 +6,11 @@ const close: CSSProperties = {
   appearance: "none",
   backgroundColor: "var(--background-color)",
   ...border,
-  color: "inherit",
+  color: "var(--color)",
   cursor: "pointer",
   display: "block",
   ...padding,
-  transition: "background-color 100ms ease-in-out, padding 100ms ease-in-out",
+  transition: "background-color 100ms ease-in-out, color 100ms ease-in-out",
 };
 
 export const Close = ({

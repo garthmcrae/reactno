@@ -13,7 +13,7 @@ const button: CSSProperties = {
   backgroundColor: "var(--background-color)",
   ...border,
   boxSizing: "border-box",
-  color: "inherit",
+  color: "var(--color)",
   cursor: "pointer",
   display: "block",
   fontFamily: "inherit",
@@ -22,7 +22,8 @@ const button: CSSProperties = {
   lineHeight: 1,
   ...padding,
   textAlign: "center",
-  transition: "background-color 100ms ease-in-out",
+  transition:
+    "background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out",
 };
 
 export const Button = forwardRef(
@@ -33,7 +34,7 @@ export const Button = forwardRef(
       onClick,
       type = "button",
     }: {
-      "aria-label": string;
+      "aria-label"?: string;
       children: ReactNode;
       onClick?: (event: MouseEvent | TouchEvent) => void;
       type?: "button" | "submit";

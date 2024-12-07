@@ -1,13 +1,13 @@
 import { CSSProperties, ReactNode } from "react";
-import { border } from "../constants/styles";
+import { border, fontSize } from "../constants/styles";
 
 const link: CSSProperties = {
   ...border,
   boxSizing: "border-box",
-  color: "inherit",
+  color: "var(--color)",
   cursor: "pointer",
   display: "block",
-  fontSize: 32,
+  fontSize,
   height: "100%",
   lineHeight: 1,
   paddingBottom: 14,

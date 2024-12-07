@@ -4,7 +4,7 @@ import { border, fontSize, padding } from "../constants/styles";
 const link: CSSProperties = {
   ...border,
   boxSizing: "border-box",
-  color: "inherit",
+  color: "var(--color)",
   cursor: "pointer",
   display: "block",
   fontSize,
@@ -12,6 +12,8 @@ const link: CSSProperties = {
   lineHeight: 1,
   ...padding,
   textDecoration: "none",
+  transition:
+    "background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out",
 };
 
 export const Link = ({

@@ -25,9 +25,9 @@ export const styling = {
   object: <Object>{octohedron}</Object>,
   paragraph: "Get inline",
 };
-export const components = {
-  href: "/components/",
-  label: "/components/",
+export const examples = {
+  href: "/examples/",
+  label: "/examples/",
   object: <Object>{field}</Object>,
   paragraph: "Children",
 };

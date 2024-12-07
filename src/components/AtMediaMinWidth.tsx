@@ -1,15 +1,14 @@
-import { CSSProperties, JSX, ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 
 export const AtMediaMinWidth = ({
   children,
-  element = "div",
+  element: Element = "div",
   style = {},
 }: {
-  style: { [key: number]: CSSProperties };
   children: ReactNode;
-  element?: keyof JSX.IntrinsicElements;
+  element?: "div" | "span";
+  style?: { [key: number]: CSSProperties };
 }) => {
-  const Element = element;
   return <Element style={useAtMediaMinWidth(style)}>{children}</Element>;
 };

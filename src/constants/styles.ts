@@ -6,7 +6,7 @@ export const borderWidth = 2;
 export const borderRadius = 0;
 
 export const border: CSSProperties = {
-  borderColor: "currentcolor",
+  borderColor: "var(--color)",
   borderRadius,
   borderStyle: "solid",
   borderWidth,

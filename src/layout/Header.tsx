@@ -1,14 +1,15 @@
 import { CSSProperties } from "react";
+import { animationFadeInUp } from "../constants/styles";
+import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { Drawer } from "../components/Drawer";
-import { Label } from "../components/Label";
+import { Heading } from "../components/Heading";
 import { Link } from "../components/Link";
+import { Mode } from "../components/Mode";
 import { useGoToPathname } from "../hooks/useGoToPathname";
-import { border, animationFadeInUp } from "../constants/styles";
 
 const brand: CSSProperties = {
   backgroundColor: "var(--color)",
-  ...border,
   color: "var(--background-color)",
   display: "block",
   fontSize: 32,
@@ -18,6 +19,7 @@ const brand: CSSProperties = {
   paddingTop: 8,
   textAlign: "center",
   textDecoration: "none",
+  transition: "background-color 100ms ease-in-out, color 100ms ease-in-out",
 };
 const list: CSSProperties = {
   alignItems: "stretch",
@@ -37,7 +39,7 @@ const nav: CSSProperties = {
   padding: 16,
 };
 const skip: CSSProperties = {
-  color: "inherit",
+  color: "var(--color)",
   cursor: "pointer",
   display: "block",
   fontSize: 12,
@@ -66,17 +68,22 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={brand} href="/">
-              **** **
+              ***** **
             </a>
-            <div style={{ marginLeft: "auto" }}>
+            <div style={{ display: "flex", marginLeft: "auto" }}>
               <Drawer>
-                <Label id="nav-heading">Site navigation</Label>
+                <Heading
+                  id="nav-heading"
+                  style={{ fontSize: 12, marginBottom: 8 }}
+                >
+                  Site navigation
+                </Heading>
                 <ul style={list}>
                   {[
                     "/",
                     "/routing/",
                     "/styling/",
-                    "/components/",
+                    "/examples/",
                     "/thoughts/",
                   ].map((item, index) => (
                     <li
@@ -105,6 +112,9 @@ export const Header = () => {
               </Drawer>
             </div>
           </nav>
+          <Box>
+            <Mode />
+          </Box>
         </Container>
       </header>
     </>

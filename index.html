@@ -32,13 +32,17 @@
       text-rendering: optimizeLegibility;
       transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
     }
-    *:focus,
-    a:hover,
-    button:hover {
+    :focus-visible {
       outline-color: var(--focus);
       outline-offset: 2px;
       outline-style: solid;
       outline-width: 2px;
+    }
+    a {
+      color: var(--color);
+    }
+    button {
+      cursor: pointer;
     }
     @media (prefers-color-scheme: light) {
       :root {

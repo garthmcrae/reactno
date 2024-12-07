@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { AtMediaMinWidth } from "../components/AtMediaMinWidth";
 import Card from "../components/Card";
 import { Box } from "../components/Box";
-import { Label } from "../components/Label";
+import { Heading } from "../components/Heading";
 import { Paragraph } from "../components/Paragraph";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
@@ -57,8 +57,10 @@ export const Articles = ({
             >
               <Box>{object}</Box>
               <Box>
-                <Label element="h3">{label}</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>
+                  {label}
+                </Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0 }}>
                   {paragraph}
                 </Paragraph>
               </Box>

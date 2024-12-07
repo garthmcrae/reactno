@@ -2,17 +2,15 @@ import { CSSProperties, ReactNode, useRef } from "react";
 import { Box } from "./Box";
 import { Button } from "./Button";
 import { Icon, down } from "./Icon";
-import { Paragraph } from "./Paragraph";
+// import { Paragraph } from "./Paragraph";
 
-import { version } from "../../package.json";
+// import { version } from "../../package.json";
 
 const container: CSSProperties = {
   alignItems: "center",
   display: "flex",
   flexDirection: "column",
-  height: "calc(100vh - 120px)",
   justifyContent: "flex-start",
-  minHeight: 408,
 };
 
 export const Banner = ({ children }: { children: ReactNode }) => {
@@ -20,9 +18,6 @@ export const Banner = ({ children }: { children: ReactNode }) => {
   return (
     <div ref={ref} style={container}>
       <>{children}</>
-      <Box>
-        <Paragraph>React No. Version: {version} (Alpha)</Paragraph>
-      </Box>
       <Box>
         <Button
           aria-label="scroll"

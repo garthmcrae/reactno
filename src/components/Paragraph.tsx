@@ -2,18 +2,18 @@ import { CSSProperties, ReactNode } from "react";
 
 export const Paragraph = ({
   children,
-  first,
-  last,
+  style = {
+    marginBottom: 24,
+    marginTop: 24,
+  },
 }: {
   children: ReactNode;
-  first?: boolean;
-  last?: boolean;
+  style?: CSSProperties;
 }) => {
   const paragraph: CSSProperties = {
     fontSize: 16,
-    lineHeight: 20 / 16,
-    marginBottom: last ? 0 : 16,
-    marginTop: first ? 0 : 16,
+    lineHeight: 24 / 16,
+    ...style,
   };
   return <p style={paragraph}>{children}</p>;
 };

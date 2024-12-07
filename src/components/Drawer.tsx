@@ -3,8 +3,10 @@ import { Button } from "./Button";
 import { Icon, lunch } from "./Icon";
 import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 import { useOnClickOutside } from "../hooks/useClickOutside";
-import { border } from "../constants/styles";
+import { border, padding } from "../constants/styles";
 import { useOnKeydown } from "../hooks/useOnKeydown";
+
+const width = 224;
 
 const container: CSSProperties = {
   position: "relative",
@@ -12,17 +14,19 @@ const container: CSSProperties = {
 const drawer: CSSProperties = {
   backgroundColor: "var(--background-color)",
   ...border,
-  padding: 14,
+  boxSizing: "border-box",
+  ...padding,
   position: "absolute",
-  right: -272,
+  right: -1 * width - 16 - 4,
   top: -4,
-  transition: "background-color 100ms ease-in-out, transform 300ms ease-in-out",
-  width: 224,
+  transition:
+    "background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out, transform 200ms ease-in-out",
+  width,
   zIndex: 2,
 };
 
 export const Drawer = ({ children }: { children: ReactNode }) => {
-  const breakpoint = 1232;
+  const breakpoint = 960 + width + 16;
   const control = useAtMediaMinWidth({
     0: {
       display: "block",
@@ -35,7 +39,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle((value) => !value);
   useOnClickOutside(ref, () => setToggle(false));
-  useOnKeydown("Equal", handleToggle);
+  useOnKeydown("Equal", handleToggle, () => window.innerWidth < breakpoint);
   return (
     <div style={container}>
       <div style={control}>
@@ -43,8 +47,8 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
           <Icon
             d={lunch}
             style={{
-              height: 24,
-              width: 24,
+              height: 20,
+              width: 20,
             }}
           />
         </Button>
@@ -52,7 +56,10 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       <div
         onClick={() => setToggle(false)}
         ref={ref}
-        style={{ ...drawer, transform: `translateX(${toggle ? -272 : 0}px)` }}
+        style={{
+          ...drawer,
+          transform: `translateX(${toggle ? -1 * width - 16 : 0}px)`,
+        }}
       >
         {children}
       </div>

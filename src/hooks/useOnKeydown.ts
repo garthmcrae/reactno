@@ -2,11 +2,12 @@ import { useEffect } from "react";
 
 export const useOnKeydown = (
   key: string,
-  handler: () => void
+  handler: () => void,
+  condition: () => boolean = () => true,
 ) => {
   useEffect(() => {
     const listener = (event: KeyboardEvent) => {
-      if (event.code === key) {
+      if (event.code === key && condition()) {
         handler();
       }
     };

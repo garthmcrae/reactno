@@ -15,7 +15,7 @@ export const Icon = ({ d, style }: { d: string; style: CSSProperties }) => {
   return (
     <svg
       aria-hidden="true"
-      fill="currentColor"
+      fill="var(--color)"
       focusable="false"
       style={icon}
       viewBox="0 0 24 24"

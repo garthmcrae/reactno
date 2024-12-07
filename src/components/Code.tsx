@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 const code: CSSProperties = {
   backgroundColor: "rgba(255,255,255,.1)",
   boxSizing: "border-box",
-  color: "currentColor",
+  color: "var(--color)",
   lineHeight: 1.25,
   margin: 0,
   overflowX: "auto",

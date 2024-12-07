@@ -16,7 +16,9 @@ export const NotFound = () => {
             <Object>{field}</Object>
           </Box>
           <Box>
-            <Heading scale={2}>****</Heading>
+            <Heading element="h1" style={{ fontSize: 32 }}>
+              ****
+            </Heading>
           </Box>
         </Banner>
         <Box>

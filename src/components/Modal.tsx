@@ -16,7 +16,7 @@ const content: CSSProperties = {
   ...border,
   ...padding,
   transform: `translateY(0)`,
-  transition: "background-color 100ms ease-in-out",
+  transition: "background-color 100ms ease-in-out, color 100ms ease-in-out",
   zIndex: 2,
 };
 const modal: CSSProperties = {
@@ -33,14 +33,15 @@ const modal: CSSProperties = {
 
 export const Modal = ({
   children,
-  name,
+  button,
   nested,
 }: {
   children: ReactNode;
-  name: string;
+  button: string;
   nested?: boolean;
 }) => {
-  const ref = useRef<HTMLButtonElement>(null);
+  const refButton = useRef<HTMLButtonElement>(null);
+  const refModal = useRef<HTMLDivElement>(null);
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => {
     if (!nested) document.body.style.overflow = "hidden";
@@ -49,19 +50,23 @@ export const Modal = ({
   const handleHideModal = () => {
     if (!nested) document.body.style.overflow = "unset";
     setShowModal(false);
-    if (ref.current) {
-      ref.current.focus();
+    if (refButton.current) {
+      refButton.current.focus();
     }
   };
-  useOnKeydown("Escape", handleHideModal);
+  const containsFocus = () =>
+    refModal.current
+      ? refModal.current && refModal.current.contains(document.activeElement)
+      : false;
+  useOnKeydown("Escape", handleHideModal, containsFocus);
   return (
     <>
-      <Button aria-label="show modal" ref={ref} onClick={handleShowModal}>
-        {name}
+      <Button aria-label="show modal" ref={refButton} onClick={handleShowModal}>
+        {button}
       </Button>
       {showModal &&
         createPortal(
-          <div style={modal}>
+          <div style={modal} ref={refModal}>
             <FocusTrap>
               <div style={animationFadeInUp}>
                 <div style={content}>

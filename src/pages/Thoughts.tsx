@@ -23,7 +23,7 @@ export const Thoughts = () => {
             <Object>{plane}</Object>
           </Box>
           <Box>
-            <Heading element="h1" scale={3}>
+            <Heading element="h1" style={{ fontSize: 32 }}>
               /thoughts/
             </Heading>
           </Box>
@@ -38,8 +38,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">https://preactjs.com</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>https://preactjs.com</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   Fast 3kB alternative to React with the same modern API
                 </Paragraph>
               </Card>
@@ -49,8 +49,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">https://vitejs.dev</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>https://vitejs.dev</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   Vite Next Generation Frontend Tooling
                 </Paragraph>
               </Card>
@@ -60,8 +60,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">https://rollupjs.org</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>https://rollupjs.org</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   rollup.js The JavaScript module bundler
                 </Paragraph>
               </Card>
@@ -78,8 +78,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">https://developer.mozilla.org</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>https://developer.mozilla.org</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   HTMLElement: style property
                 </Paragraph>
               </Card>
@@ -92,8 +92,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">Theo - t3.gg</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>Theo - t3.gg</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   CSS Is 2.4x Slower Than Inline Styles (Oh No...)
                 </Paragraph>
               </Card>
@@ -106,8 +106,8 @@ export const Thoughts = () => {
                 <div style={{ marginBottom: 16 }}>
                   <Pyramid />
                 </div>
-                <Label element="h3">David el Yosef</Label>
-                <Paragraph first last>
+                <Heading element="h3" style={{ fontSize: 12, marginBottom: 8 }}>David el Yosef</Heading>
+                <Paragraph style={{ marginBottom: 0, marginTop: 0}}>
                   How to use media queries in JavaScript?
                 </Paragraph>
               </Card>
@@ -115,12 +115,12 @@ export const Thoughts = () => {
           </FlexContainer>
         </Box> */}
         <Box>
-          <Paragraph first>
+          <Paragraph style={{ marginTop: 0 }}>
             Worth noting this came together really quickly. I think it's because
             I never had to switch gears between the TS(X) and CSS you just write
             components.
           </Paragraph>
-          <Paragraph last>
+          <Paragraph style={{ marginBottom: 0 }}>
             I'm running the following to write the build output to a file so we
             can see what size the final built files are. As you can see it's
             **** all.

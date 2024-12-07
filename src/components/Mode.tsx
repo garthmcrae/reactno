@@ -1,15 +1,29 @@
-import { CSSProperties, useEffect, useState } from "react";
-import { Button } from "./Button";
-import { Label } from "./Label";
-import { border, breakpoint } from "../constants/styles";
-import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
+import { CSSProperties } from "react";
+import { border, fontSize, padding } from "../constants/styles";
+import { Heading } from "./Heading";
 
+const button: CSSProperties = {
+  appearance: "none",
+  backgroundColor: "var(--background-color)",
+  borderStyle: "none",
+  boxSizing: "border-box",
+  color: "var(--color)",
+  cursor: "pointer",
+  display: "block",
+  fontFamily: "inherit",
+  fontSize,
+  fontWeight: 700,
+  lineHeight: 1,
+  padding: 8,
+  textAlign: "center",
+};
 const container: CSSProperties = {
   backgroundColor: "var(--background-color)",
   ...border,
-  padding: 16,
-  transition: "background-color 100ms ease-in-out",
-  width: "max-content",
+  ...padding,
+  transition:
+    "background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out",
+  // width: "max-content",
 };
 const list: CSSProperties = {
   display: "flex",
@@ -21,60 +35,40 @@ const list: CSSProperties = {
   paddingInlineStart: 0,
 };
 
-export const Mode = () => {
-  const [mode, setMode] = useState("low");
-  const control = useAtMediaMinWidth({
-    0: {
-      paddingBottom: 8,
-      paddingLeft: 16,
-      paddingRight: 16,
-      paddingTop: 8,
-    },
-    [breakpoint + 124]: {
-      bottom: 0,
-      left: breakpoint + 124,
-      paddingBottom: 16,
-      paddingTop: 16,
-      position: "fixed",
-      transform: "rotate(-90deg)",
-      transformOrigin: "bottom left",
-    },
-  });
-  useEffect(() => {
-    if (mode === "dark") {
-      setMode("dark");
-      document.documentElement.style.setProperty("--color", "#d7d4d4");
-      document.documentElement.style.setProperty(
-        "--background-color",
-        "#191921"
-      );
-    }
-    if (mode === "light") {
-      setMode("light");
-      document.documentElement.style.setProperty("--color", "#191921");
-      document.documentElement.style.setProperty(
-        "--background-color",
-        "#d7d4d4"
-      );
-    }
-  }, [mode]);
+const modes = [
+  { backgroundColor: "#191921", color: "#d7d4d4" },
+  { backgroundColor: "#d7d4d4", color: "#191921" },
+  { backgroundColor: "#000000", color: "#ffffff" },
+  { backgroundColor: "#28271a", color: "#72fa3e" },
+];
+
+export const Mode = ({ disabled }: { disabled?: boolean }) => {
+  const handleClick = (backgroundColor: string, color: string) => {
+    document.documentElement.style.setProperty(
+      "--background-color",
+      backgroundColor
+    );
+    document.documentElement.style.setProperty("--color", color);
+  };
   return (
-    <div style={control}>
-      <div style={container}>
-        <Label>Modes</Label>
-        <ul style={list}>
-          <li>
-            <Button aria-label="toggle" onClick={() => setMode("dark")}>
-              dark
-            </Button>
-          </li>
-          <li>
-            <Button aria-label="toggle" onClick={() => setMode("light")}>
-              light
-            </Button>
-          </li>
-        </ul>
-      </div>
+    <div style={container}>
+      <Heading style={{ fontSize: 12, marginBottom: 8 }}>Modes</Heading>
+      <ul style={list}>
+        {modes.map(({ backgroundColor, color }) => {
+          const key = `${backgroundColor}/${color}`;
+          return (
+            <li key={key}>
+              <button
+                disabled={disabled}
+                onClick={() => handleClick(backgroundColor, color)}
+                style={{ ...button, backgroundColor, color }}
+              >
+                {key}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

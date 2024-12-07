@@ -1,6 +1,6 @@
 import { Router } from "./components/Router";
 
-import { Components } from "./pages/Components";
+import { Examples } from "./pages/Examples";
 import { NotFound } from "./pages/NotFound";
 import { Thoughts } from "./pages/Thoughts";
 import { Root } from "./pages/Root";
@@ -12,7 +12,7 @@ export const Routes = () => {
     <Router>
       {{
         "/": <Root />,
-        "/components/": <Components />,
+        "/examples/": <Examples />,
         "/thoughts/": <Thoughts />,
         "/routing/": <Routing />,
         "/styling/": <Styling />,
